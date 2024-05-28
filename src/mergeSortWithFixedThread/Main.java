@@ -15,10 +15,10 @@ public class Main {
         List<Integer> list = new ArrayList<>();
         UUID ui = UUID.randomUUID();
 
-        for (int i = 0; i < 10000; i++) {
-            list.add(new Random().nextInt() % 10000);
+        for (int i = 0; i < 3000; i++) {
+            list.add(new Random().nextInt() % 3000);
         }
-        ExecutorService es = Executors.newFixedThreadPool(1000);
+        ExecutorService es = Executors.newFixedThreadPool(500);
         ThreadedMergeSort mergeSort = new ThreadedMergeSort(list, es);
         Future<List<Integer>> sortedFuture = es.submit(mergeSort);
         list = sortedFuture.get();
