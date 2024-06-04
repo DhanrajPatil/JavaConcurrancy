@@ -14,7 +14,7 @@ public class Subtractor implements Callable<Void> {
 
     @Override
     public Void call() throws Exception {
-        for(int i = 1; i <= 5000 ; i++) {
+        for(int i = 1; i <= 50000 ; i++) {
             lock.lock();
             this.v.val = this.v.val - i;
             lock.unlock();

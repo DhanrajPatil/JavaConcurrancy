@@ -22,5 +22,8 @@ public class Client {
         // this will not work beacuse first and second are objects not integers
         //System.out.println(guest.first + guest.second);
 
+        GenericPair<String, Integer> pairs = new GenericPair<>("One", 1);
+        System.out.println(pairs.getFirst() + ", " + pairs.getSecond());
+
     }
 }

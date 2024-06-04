@@ -1,6 +1,5 @@
 package locksWithRunnable;
 
-import java.util.concurrent.Callable;
 import java.util.concurrent.locks.Lock;
 
 public class Subtractor implements Runnable {

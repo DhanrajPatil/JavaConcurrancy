@@ -18,12 +18,10 @@ public class Client {
         Subtractor y = new Subtractor(v, l);
         ExecutorService ec = Executors.newCachedThreadPool();
 
-        List<Callable<Void>> tasks = new ArrayList<>();
-        tasks.add(x);
-        tasks.add(y);
-        List<Future<Void>> f = ec.invokeAll(tasks);
+        Future<Void> addF = ec.submit(x);
+        Future<Void> subF = ec.submit(y);
 
         System.out.println(v.val);
-        ec.shutdownNow();
+        //ec.shutdownNow();
     }
 }
